@@ -1,89 +1,66 @@
-/* Global Styles */
-* {
-  font-family: Arial, Helvetica, sans-serif;
+/* HeroesComponent's private CSS styles */
+.heroes {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
 }
-h1 {
-  color: #264D73;
-  font-size: 2.5rem;
+
+.heroes li {
+  display: flex;
 }
-h2, h3 {
-  color: #444;
-  font-weight: lighter;
-}
-h3 {
-  font-size: 1.3rem;
-}
-body {
-  padding: .5rem;
-  max-width: 1000px;
-  margin: auto;
-}
-@media (min-width: 600px) {
-  body {
-    padding: 2rem;
-  }
-}
-body, input[text] {
-  color: #333;
-  font-family: Cambria, Georgia, serif;
-}
-a {
+
+.heroes button {
+  flex: 1;
   cursor: pointer;
-}
-button {
-  background-color: #eee;
-  border: none;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: 0;
   border-radius: 4px;
-  cursor: pointer;
-  color: black;
-  font-size: 1.2rem;
-  padding: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  display: flex;
+  align-items: stretch;
+  height: 1.8em;
 }
-button:hover {
+
+.heroes button:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
+  left: .1em;
+}
+
+.heroes button:active {
+  background-color: #525252;
+  color: #fafafa;
+}
+
+.heroes button.selected {
   background-color: black;
   color: white;
 }
-button:disabled {
-  background-color: #eee;
-  color: #aaa;
-  cursor: auto;
+
+.heroes button.selected:hover {
+  background-color: #505050;
+  color: white;
 }
 
-/* Navigation link styles */
-nav a {
-  padding: 5px 10px;
-  text-decoration: none;
-  margin-right: 10px;
-  margin-top: 10px;
+.heroes button.selected:active {
+  background-color: black;
+  color: white;
+}
+
+.heroes .badge {
   display: inline-block;
-  background-color: #e8e8e8;
-  color: #3d3d3d;
-  border-radius: 4px;
-}
-
-nav a:hover {
+  font-size: small;
   color: white;
-  background-color:  #42545C;
-}
-nav a.active {
-  background-color: black;
-  color: white;
-}
-hr {
-  margin: 1.5rem 0;
-}
-input[type="text"] {
-  box-sizing: border-box;
-  width: 100%;
-  padding: .5rem;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #405061;
+  line-height: 1em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
 }
 
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/
+.heroes .name {
+  align-self: center;
+}
