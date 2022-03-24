@@ -64,3 +64,8 @@
 .heroes .name {
   align-self: center;
 }
+
+.heroes .gender {
+  align-self: center;
+  margin-left:2.5em;
+}
